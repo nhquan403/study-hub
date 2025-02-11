@@ -8,7 +8,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
             className={`${manrope.variable} grid grid-cols-[300px_minmax(900px,_1fr)]`}
         >
             <SideBar />
-            <main>{children}</main>
+            <main className="p-4">{children}</main>
         </div>
     );
 };

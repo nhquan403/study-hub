@@ -17,6 +17,12 @@
     }
 } */
 
+@layer base {
+    body {
+        @apply bg-gray-100 dark:bg-grayDarkest dark:text-white text-grayDarkest;
+    }
+}
+
 @layer components {
     .icon-animated {
         stroke-dashoffset: 100;

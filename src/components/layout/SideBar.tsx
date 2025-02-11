@@ -1,10 +1,12 @@
 import ActiveLink from "@/components/common/ActiveLink";
+import { ModeToggle } from "@/components/common/ModeToggle";
 import { courseList } from "@/constants";
 import { SideBarItem } from "@/types";
+import { UserButton } from "@clerk/nextjs";
 
 const SideBar = () => {
     return (
-        <aside className="sidebar p-5 border-r border-r-gray-200 h-screen">
+        <aside className="sidebar p-5 border-r border-r-gray-200 bg-white h-screen flex flex-col dark:bg-grayDarker dark:border-opacity-10">
             <div className="icon font-bold text-3xl mb-5">
                 <span className="text-primary">S</span>
                 tudyHub
@@ -17,6 +19,10 @@ const SideBar = () => {
                     />
                 ))}
             </ul>
+            <div className="mt-auto flex justify-end gap-3">
+                <ModeToggle />
+                <UserButton />
+            </div>
         </aside>
     );
 };
